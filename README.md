@@ -9,7 +9,12 @@ process that depends on communication with an outside service that is slow and
 therefore will tie up your main process which may be trying to load a page or in
 my case monitor a file server for changes that at times can be high traffic.
 
-To try out, clone this repo and bundle install.
+To try out, clone this repo and bundle install:
+
+```
+git clone git@github.com:JSalig1/multithread.git
+bundle install
+```
 
 Install redis if you don't already have it (I use homebrew):
 
@@ -44,7 +49,7 @@ process.call_async
 
 Do `call_async` a bunch if you like.
 
-This dds a new job to redis which sidekiq will pick up and execute. You'll see
+This adds a new job to redis which sidekiq will pick up and execute. You'll see
 the results print out to the terminal window where your sidekiq is running.
 Hopefully if you're using this you'll be doing all sorts of more useful things
 than printing out a few numbers and a string. ;)
